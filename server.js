@@ -1,7 +1,9 @@
 var http = require('http');
 var app = require('express')();
 
-app.use('Access-Control-Allow-Origin', '*');
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+});
 
 app.post('/', function(req, res, next) {
     res.send({ success: true });
