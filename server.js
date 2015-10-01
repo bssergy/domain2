@@ -2,8 +2,8 @@ var http = require('http');
 var app = require('express')();
 
 app.use(function(req, res, next) {
-    if (req.type == 'OPTIONS') {
-        res.status(200).end();
+    if (req.method == 'OPTIONS') {
+        return res.status(200).end();
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
 });
