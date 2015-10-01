@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bssergy/domain2/issues"
   },
-  "homepage": "https://github.com/bssergy/domain2#readme"
+  "homepage": "https://github.com/bssergy/domain2#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }

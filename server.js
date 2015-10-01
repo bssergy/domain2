@@ -1,10 +1,10 @@
 var http = require('http');
-var fs = require('fs');
+var app = require('express')();
 
-http.createServer(function(req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.end(JSON.stringify({ success: true }));
-}).listen(3005, function() {
+app.post('/', function(req, res, next) {
+    res.send({ success: true });
+})
+
+http.createServer(app).listen(3005, function() {
     console.log('Server is listening on port 3005');
 });
