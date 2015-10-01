@@ -5,7 +5,7 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'x-access-token');
     if (req.method == 'OPTIONS') {
-        return res.status(200).end();
+        return res.status(204).end();
     }
 });
 
